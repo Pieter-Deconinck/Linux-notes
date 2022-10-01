@@ -1,6 +1,6 @@
 01-10-2022
 
-# 1.4 Labo- oefeningen - Pieter Dc
+# 1.4 Labo-oefeningen - Pieter Dc
 
 ## Gebruikers en groepen aanmaken
 
