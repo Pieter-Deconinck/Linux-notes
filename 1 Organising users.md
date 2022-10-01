@@ -154,3 +154,44 @@
         je behoort niet tot de group van alice dus heb je geen rechten om daar iets aan te maken.
 
 ### -6-
+
+- Bekijk de eerste regels van het bestand /etc/shadow. Wat bemerk je bij de gebruiker root?
+
+        sudo head /etc/shadow
+        Root heeft een ! voor zich
+
+- Log in als de root-gebruiker met het commando sudo -i (let op de spatie!)
+
+       alternatief: sudo su -
+
+- Wat is de home-directory van root?
+
+        /root
+
+- Wat is het UID van deze gebruiker, wat is de GID?
+
+        head /etc/passwd
+        de UID en GID is 0
+
+- Stel, nog steeds ingelogd als root, een wachtwoord in voor root. Kies een uniek, nieuw wachtwoord! Merk je de verandering in /etc/shadow?
+
+        passwd
+        Ja de hash in /etc/shadow is anders
+
+- Log in als de root-gebruiker met het commando su - (let op de spatie!).
+  Log uit, en log opnieuw in met sudo su -. Wat wordt er anders?
+
+          Bij de ene vraagt hij eerst het wachtwoord. Bij de andere niet als je recent al sudo hebt gebruikt.
+
+# -7-
+
+- Voeg jezelf (met je eigen gekozen loginnaam) toe aan de VM waarin we werken. Gebruik hiervoor useradd -m <jouw loginnaam>
+
+        sudo useradd -m pieter
+        sudo passwd pieter
+
+- Bewerk /etc/passwd zodat je ook bash gebruikt als default shell.
+
+        sudo nano /etc/passwd
+        verander de /bin/sh naar /bin/bash
+        en doe dan ctrl + s en ctrl + x
