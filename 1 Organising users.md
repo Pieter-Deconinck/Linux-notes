@@ -69,12 +69,12 @@
 
 - Maak nu de gebruikers in onderstaande tabel aan. Zorg er voor dat ze al meteen bij aanmaken tot de aangegeven groepen behoren. Kies zelf geschikte wachtwoorden voor deze gebruikers en vergeet ze niet (vul eventueel een kolom toe aan de tabel).
 
-     | Gebruikersnaam | Primaire groep | secundaire group |
-     | -------------- | -------------- | ---------------- |
-     | bob            | sporten        | judo             |
-     | carol          | sporten        | zwemmen          |
-     | daniel         | sporten        | judo             |
-     | eva            | sporten        | zwemmen          |
+  | Gebruikersnaam | Primaire groep | secundaire group |
+  | -------------- | -------------- | ---------------- |
+  | bob            | sporten        | judo             |
+  | carol          | sporten        | zwemmen          |
+  | daniel         | sporten        | judo             |
+  | eva            | sporten        | zwemmen          |
 
         sudo useradd -m -g sporten -G judo bob
         sudo passwd bob
@@ -93,3 +93,20 @@
         want met /etc/group zie je er ze niet inzitten
 
         of check het met sudo groups naam (bv: sudo groups alice)
+
+- Verwijder nu de groep alice en controleer.
+
+        sudo delgroup alice
+        sudo less /etc/group -> alice is inderdaad weg
+
+- Gebruiker daniel gaat een tijdje niet meer sporten. Zorg er voor dat deze gebruiker tot nader order geen toegang meer kan hebben tot het systeem (zonder het wachtwoord of de gebruiker te verwijderen!).
+
+        sudo usermod -L daniel
+        of sudo passwd -l daniel
+
+        sudo passwd -u daniel -> terug unlocken
+
+- Hoe kan je controleren dat daniel inderdaad geen toegang meer heeft tot het systeem? In welk bestand kan dat en hoe zie je daar dan dat het account afgesloten is?
+
+        sudo passwd -S daniel -> status zien van het account
+        of gaan kijken in /etc/shadow Het uitroepteken(groen) betekent dat het account locked is.
