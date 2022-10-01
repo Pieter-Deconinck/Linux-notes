@@ -195,6 +195,6 @@
         sudo nano /etc/passwd
         verander de /bin/sh naar /bin/bash
         en doe dan ctrl + s en ctrl + x
-    ![image](https://user-images.githubusercontent.com/100133263/193408475-6857a779-aa45-43ec-b0b9-ee961adbb025.png)
+    ![image](https://user-images.githubusercontent.com/100133263/193408516-be616674-b70c-4a0a-945b-49de66b8ff62.png)
 
 
