@@ -43,3 +43,33 @@
 
         /etc/group
 
+- Wat zal het GID zijn van de groepen zwemmen en judo als je deze nu onmiddellijk zou aanmaken? Maak ze aan en controleer!
+
+        1003 en 1004
+        sudo addgroup zwemmen
+        sudo addgroup judo
+
+- Voeg de gebruiker alice toe aan de groepen sporten en zwemmen
+
+        sudo adduser alice sporten
+        sudo adduser alice zwemmen
+
+- Log in als alice door in een terminal het commando su - alice (let op de spaties!) uit te voeren En zorg er nu voor dat de groep sporten de primaire groep wordt van alice.
+
+        Alice heeft geen sudo toegang dus kan haar primary group niet aanpassen.
+        om haar sudo access te geven: sudo usermod -aG sudo alice
+
+        sudo usermod -g sporten alice
+
+- Zorg er voor dat alice uitgelogd is, ga terug naar root
+
+        exit
+
+- Maak nu de gebruikers in onderstaande tabel aan. Zorg er voor dat ze al meteen bij aanmaken tot de aangegeven groepen behoren. Kies zelf geschikte wachtwoorden voor deze gebruikers en vergeet ze niet (vul eventueel een kolom toe aan de tabel).
+
+| Gebruikersnaam | Primaire groep | secundaire group |
+| -------------- | -------------- | ---------------- |
+| bob            | sporten        | judo             |
+| carol          | sporten        | zwemmen          |
+| daniel         | sporten        | judo             |
+| eva            | sporten        | zwemmen          |
