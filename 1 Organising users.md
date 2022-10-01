@@ -200,4 +200,6 @@
 
         sudo usermod -aG sudo pieter
 
+  ![image](https://user-images.githubusercontent.com/100133263/193408564-2157a449-d64b-467b-9953-f72d10938ab8.png)
+
 ## Eigenaars en groepseigenaars veranderen
