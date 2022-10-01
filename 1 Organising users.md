@@ -305,7 +305,7 @@
 
 - Geef drie manieren om een gebruiker (tijdelijk) de toegang tot het systeem te ontzeggen.
 
-        passwoord locken met
+        password locken met
         sudo usermod -L
         sudo passwd -l
         of in /etc/shadow na het dollarteken een ! zetten
