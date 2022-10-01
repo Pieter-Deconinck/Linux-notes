@@ -21,4 +21,25 @@
 
 - Maak een nieuwe gebruiker aan met de naam alice, zonder specifieke opties. Werk hiervoor met adduser
 
-        a
+        sudo adduser alice
+
+- In welk bestand kan je de UID, gebruikersnaam, homedirectory, enz. van alle gebruikers terugvinden?
+
+      in /etc/passwd
+
+- In welk configuratiebestand kan je al de bestaande gebruikersgroepen nakijken, en ook de gebruikers die lid zijn van elke groep?
+
+      /etc/group
+
+- In welk configuratiebestand vind je de wachtwoorden van alle gebruikers?
+
+        /etc/shadow
+
+- Maak een groep aan met de naam: sporten
+
+        sudo addgroup sporten
+
+- In welk configuratiebestand vind je het GID van deze groep terug?
+
+        /etc/group
+
