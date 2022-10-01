@@ -83,7 +83,7 @@
         sudo passwd carol
 
         sudo useradd -m -g sporten -G judo daniel
-        udo passwd daniel
+        sudo passwd daniel
 
         sudo useradd -m -g sporten -G zwemmen eva
         sudo passwd eva
