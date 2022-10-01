@@ -203,3 +203,109 @@
   ![image](https://user-images.githubusercontent.com/100133263/193408564-2157a449-d64b-467b-9953-f72d10938ab8.png)
 
 ## Eigenaars en groepseigenaars veranderen
+
+- Maak als root onder /srv/ twee directories aan met de naam groep/verkoop/ en groep/inkoop/. Maak ook 2 groepen aan met de namen verkoop en inkoop. Maak twee gebruikers aan, margriet met primaire groep verkoop en roza, die als primaire groep inkoop heeft. Zorg dat de groepen eigenaar zijn van de overeenkomstige directories en dat margriet eigenaar is van directory verkoop en roza van het directory inkoop. Geef de gebruikte commando’s en controleer:
+
+        sudo su -
+        cd /srv/
+        mkdir -p groep/verkoop
+        mkdir -p groep/inkoop
+        (de -p zorgt ervoor dat je subdirs kan maken)
+
+        groupadd verkoop
+        groupadd inkoop
+
+        useradd -m -g verkoop margriet
+        passwd margriet
+
+        useradd -m -g inkoop roza
+        passwd roza
+
+        chgrp inkoop /srv/groep/inkoop/
+        chgrp verkoop /srv/groep/verkoop/
+
+        chmod roza /srv/groep/inkoop/
+        chmod margriet /srv/groep/verkoop
+
+        ls -l groep/
+
+- Zorg ervoor dat gebruikers en groepen uit de vorige stap alle permissies hebben. Geef het geschikte commando en controleer.
+
+        chmod 771 /srv/groep/inkoop/
+        chmod 771 /srv/groep/verkoop/
+
+- Voeg een gebruiker, vb alice, toe aan de groep inkoop en verkoop en controleer. Geen van beide groepen zijn primair.
+
+        adduser alice inkoop
+        adduser alice verkoop
+
+        id -gn alice -> zoals je kan zien is sporten nog steeds alices primary group.
+
+- Log in als alice en ga naar de directory verkoop. Laat de gebruiker hier een leeg bestand, bestand1, aanmaken in de directory verkoop. (Indien je hier problemen ondervindt, log dan in via een andere terminalvenster).
+
+        su - alice
+        cd /srv/groep/verkoop
+        touch bestand1
+
+- Wie is nu eigenaar van bestand1 en wie de groepseigenaar?
+
+        ls -l
+        Alice is de eigenaar
+        sporten is de groep eigenaar
+
+- Zorg er nu voor dat de groepseigenaar van de directory verkoop automatisch de groepseigenaar wordt van alle bestanden en directories die onder verkoop gemaakt worden. Geef de gebruikte commando’s.
+
+        sudo chmod g+s /srv/groep/verkoop
+
+- Doe hetzelfde voor de directory inkoop. Geef de gebruikte commando’s.
+
+        sudo chmod g+s /srv/groep/inkoop
+
+- Verander opnieuw naar gebruiker alice en laat deze gebruiker een leeg bestand2 aanmaken in de directory verkoop. Geef de gebruikte commando’s.
+
+        su - alice
+        cd /srv/groep/verkoop
+        touch bestand2
+
+- Wie is nu eigenaar van bestand2 en wie groepseigenaar?
+
+        ls -l
+        Alice is de eigenaar
+        Verkoop is de groepseigenaar
+
+- Laat nu gebruiker margriet een leeg bestand bestand3 aanmaken. Controleer de eigenaar van bestand3 en de groepseigenaar.
+
+        su - margriet
+        cd /srv/groep/verkoop
+        touch bestand3
+
+- Laat nu gebruiker alice bestand3 verwijderen. Lukt dit?
+
+        su - alice
+        cd /srv/groep/verkoop
+        rm bestand3
+
+        ja dit lukt.
+
+- Zorg er nu voor dat de gebruikers elkaars bestanden niet kunnen verwijderen. Als de gebruiker echter eigenaar is van het betreffende directory mag dit wel. Leg uit hoe je dit doet en controleer. Schrijf je gevolgde procedure op.
+
+        sticky bit gebruiken in de rechten van de directory
+        dit zorgt er voor dat niemand de bestanden van iemand anders kan verwijderen behalve de eigenaar van de dir
+
+        sudo chmod +t /srv/groep/verkoop
+
+## Reflectievragen
+
+- Je kan inloggen op het systeem als root met de volgende twee commando's: su - , sudo su -
+  Beide manieren leveren je root access op, maar de wachtwoorden kunnen verschillend zijn. Wiens wachtwoord gebruik je bij het eerste commando, wiens bij het tweede?
+
+          bij de eerste gebruik je het wachtwoord van root
+
+          bij de tweede gebruik je het wachtwoord van het account dat je op zit. dit werkt ook alleen als dit account deel is van de sudo groep.
+
+- Geef drie manieren om een gebruiker (tijdelijk) de toegang tot het systeem te ontzeggen.
+
+        passwoord locken met
+        sudo usermod -L
+        sudo passwd -l
+        of in /etc/shadow na het dollarteken een ! zetten
