@@ -195,3 +195,9 @@
         sudo nano /etc/passwd
         verander de /bin/sh naar /bin/bash
         en doe dan ctrl + s en ctrl + x
+
+- Nu wil je jezelf eveneens adminstrator van het systeem maken, zodat je met sudo beheerstaken kan uitvoeren. Aan welke groep voeg je jezelf hiervoor toe?
+
+        sudo usermod -aG sudo pieter
+
+## Eigenaars en groepseigenaars veranderen
