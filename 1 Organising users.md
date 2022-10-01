@@ -12,9 +12,13 @@
 - Wat is het UID van deze gebruiker, wat is de GID?
 
        gebruik sudo less /etc/passwd om de UID en GID te vinden
+       (gebruik q om uit less te gaan)
+
        De user id van osboxes is 1000 (groen)
        en de group id is 1000(rood)
-    ![image](https://user-images.githubusercontent.com/100133263/193402681-5350636c-1499-42b9-8fdb-13503ae314cc.png)
 
+  ![image](https://user-images.githubusercontent.com/100133263/193402681-5350636c-1499-42b9-8fdb-13503ae314cc.png)
 
+- Maak een nieuwe gebruiker aan met de naam alice, zonder specifieke opties. Werk hiervoor met adduser
 
+        a
