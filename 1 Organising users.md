@@ -14,5 +14,7 @@
        gebruik sudo less /etc/passwd om de UID en GID te vinden
        De user id van osboxes is 1000 (eerste)
        en de group id is 1000(tweede)
+       ![image](https://user-images.githubusercontent.com/100133263/193402578-e58560b7-9f87-4fba-aef4-efba8247604c.png)
+
 
 
