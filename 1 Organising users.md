@@ -69,12 +69,12 @@
 
 - Maak nu de gebruikers in onderstaande tabel aan. Zorg er voor dat ze al meteen bij aanmaken tot de aangegeven groepen behoren. Kies zelf geschikte wachtwoorden voor deze gebruikers en vergeet ze niet (vul eventueel een kolom toe aan de tabel).
 
-| Gebruikersnaam | Primaire groep | secundaire group |
-| -------------- | -------------- | ---------------- |
-| bob            | sporten        | judo             |
-| carol          | sporten        | zwemmen          |
-| daniel         | sporten        | judo             |
-| eva            | sporten        | zwemmen          |
+     | Gebruikersnaam | Primaire groep | secundaire group |
+     | -------------- | -------------- | ---------------- |
+     | bob            | sporten        | judo             |
+     | carol          | sporten        | zwemmen          |
+     | daniel         | sporten        | judo             |
+     | eva            | sporten        | zwemmen          |
 
         sudo useradd -m -g sporten -G judo bob
         sudo passwd bob
