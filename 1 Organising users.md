@@ -196,7 +196,7 @@
         verander de /bin/sh naar /bin/bash
         en doe dan ctrl + s en ctrl + x
         
-      ![image](https://user-images.githubusercontent.com/100133263/193408564-2157a449-d64b-467b-9953-f72d10938ab8.png)
+    ![image](https://user-images.githubusercontent.com/100133263/193408564-2157a449-d64b-467b-9953-f72d10938ab8.png)
 
 - Nu wil je jezelf eveneens adminstrator van het systeem maken, zodat je met sudo beheerstaken kan uitvoeren. Aan welke groep voeg je jezelf hiervoor toe?
 
