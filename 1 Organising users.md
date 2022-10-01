@@ -196,4 +196,6 @@
         verander de /bin/sh naar /bin/bash
         en doe dan ctrl + s en ctrl + x
     ![image](https://user-images.githubusercontent.com/100133263/193408395-0b096a80-d865-493c-8c3d-9ecac7eb4d6f.png)
+    ![image](https://user-images.githubusercontent.com/100133263/193408435-f01f9299-a4c4-4396-bea0-54736e2cdfbe.png)
+
 
