@@ -4,6 +4,8 @@
 
 ## Gebruikers en groepen aanmaken
 
+### 1
+
 - Wat is het commando om de huidige directory op te vragen? In welke map bevind je jou nu?
 
         pwd
@@ -19,9 +21,13 @@
 
   ![image](https://user-images.githubusercontent.com/100133263/193402681-5350636c-1499-42b9-8fdb-13503ae314cc.png)
 
+### 2
+
 - Maak een nieuwe gebruiker aan met de naam alice, zonder specifieke opties. Werk hiervoor met adduser
 
         sudo adduser alice
+
+### 3
 
 - In welk bestand kan je de UID, gebruikersnaam, homedirectory, enz. van alle gebruikers terugvinden?
 
@@ -34,6 +40,8 @@
 - In welk configuratiebestand vind je de wachtwoorden van alle gebruikers?
 
         /etc/shadow
+
+### 4
 
 - Maak een groep aan met de naam: sporten
 
@@ -66,6 +74,8 @@
 - Zorg er voor dat alice uitgelogd is, ga terug naar root
 
         exit
+
+### 5
 
 - Maak nu de gebruikers in onderstaande tabel aan. Zorg er voor dat ze al meteen bij aanmaken tot de aangegeven groepen behoren. Kies zelf geschikte wachtwoorden voor deze gebruikers en vergeet ze niet (vul eventueel een kolom toe aan de tabel).
 
@@ -142,3 +152,5 @@
 
         touch test -> permission denied
         je behoort niet tot de group van alice dus heb je geen rechten om daar iets aan te maken.
+
+### 7
