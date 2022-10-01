@@ -94,6 +94,8 @@
 
         of check het met sudo groups naam (bv: sudo groups alice)
 
+        voor de primary group kan je ook naar /etc/passwd gaan kijken.
+
 - Verwijder nu de groep alice en controleer.
 
         sudo delgroup alice
@@ -101,14 +103,42 @@
 
 - Gebruiker daniel gaat een tijdje niet meer sporten. Zorg er voor dat deze gebruiker tot nader order geen toegang meer kan hebben tot het systeem (zonder het wachtwoord of de gebruiker te verwijderen!).
 
-        sudo usermod -L daniel
-        of sudo passwd -l daniel
-
-        sudo passwd -u daniel -> terug unlocken
+        sudo passwd -l daniel
+        of alternatief: sudo usermod -L daniel
 
 - Hoe kan je controleren dat daniel inderdaad geen toegang meer heeft tot het systeem? In welk bestand kan dat en hoe zie je daar dan dat het account afgesloten is?
 
         sudo passwd -S daniel -> status zien van het account
         of gaan kijken in /etc/shadow Het uitroepteken(groen) betekent dat het account locked is.
-     ![image](https://user-images.githubusercontent.com/100133263/193406789-4cb50829-69d4-4c1b-bac9-ac0f06d1260f.png)
 
+  ![image](https://user-images.githubusercontent.com/100133263/193406789-4cb50829-69d4-4c1b-bac9-ac0f06d1260f.png)
+
+- Gebruiker daniel komt terug naar de sportclub. Geef hem opnieuw toegang tot het systeem.
+
+         sudo passwd -u daniel -> terug unlocken
+
+- Gebruiker eva stopt helemaal met sporten. Verwijder deze gebruiker, maar doe dit zorgvuldig: zorg er in het bijzonder voor dat ook haar homedirectory verwijderd wordt.
+
+        sudo userdel -r eva
+
+- Log aan als de gebruiker carol
+
+        su - carol
+
+- Controleer of je in de “thuismap” bent van deze gebruiker. Maak onder deze map een bestand test aan door middel van het commando touch.
+
+        pwd
+        touch test
+
+- Probeer nu als gebruiker carol je te verplaatsen naar de “thuismap” van alice.
+
+        cd /home/alice
+
+- Kan je de inhoud van de mappen binnen de thuismap van alice bekijken?
+
+        ja
+
+- Probeer nu als carol onder de “thuismap” van alice ook een bestand test te maken. Lukt dit? Kan je dit verklaren?
+
+        touch test -> permission denied
+        je behoort niet tot de group van alice dus heb je geen rechten om daar iets aan te maken.
