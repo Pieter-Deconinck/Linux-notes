@@ -42,6 +42,7 @@
 - In welk configuratiebestand vind je het GID van deze groep terug?
 
         /etc/group
+     ![image](https://user-images.githubusercontent.com/100133263/193402964-8ca2b997-fbcb-404c-87ed-51af9eeafb7c.png)
 
 - Wat zal het GID zijn van de groepen zwemmen en judo als je deze nu onmiddellijk zou aanmaken? Maak ze aan en controleer!
 
