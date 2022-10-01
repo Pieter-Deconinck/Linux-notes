@@ -110,3 +110,5 @@
 
         sudo passwd -S daniel -> status zien van het account
         of gaan kijken in /etc/shadow Het uitroepteken(groen) betekent dat het account locked is.
+     ![image](https://user-images.githubusercontent.com/100133263/193406789-4cb50829-69d4-4c1b-bac9-ac0f06d1260f.png)
+
