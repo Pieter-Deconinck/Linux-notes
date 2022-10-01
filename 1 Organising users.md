@@ -79,7 +79,6 @@
         sudo useradd -m -g sporten -G judo bob
         sudo passwd bob
 
-
         sudo useradd -m -g sporten -G zwemmen carol
         sudo passwd carol
 
