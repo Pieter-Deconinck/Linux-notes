@@ -87,3 +87,9 @@
 
         sudo useradd -m -g sporten -G zwemmen eva
         sudo passwd eva
+
+        doe id naam (bv: id alice)
+        om te checken of ze de juiste primary group hebben
+        want met /etc/group zie je er ze niet inzitten
+
+        of check het met sudo groups naam (bv: sudo groups alice)
