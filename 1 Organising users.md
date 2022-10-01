@@ -183,7 +183,7 @@
 
           Bij de ene vraagt hij eerst het wachtwoord. Bij de andere niet als je recent al sudo hebt gebruikt.
 
-# -7-
+## -7-
 
 - Voeg jezelf (met je eigen gekozen loginnaam) toe aan de VM waarin we werken. Gebruik hiervoor useradd -m <jouw loginnaam>
 
