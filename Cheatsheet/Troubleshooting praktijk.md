@@ -154,7 +154,14 @@
 
         sudo setsebool -P httpd_can_network_connect_db on
 
+- Check if SELinux enabled
 
+        getenforce
+
+- Disable or enable SELinux
+
+        setenforce 0
+        setenforce 1
     	
 
 ## Extra's
