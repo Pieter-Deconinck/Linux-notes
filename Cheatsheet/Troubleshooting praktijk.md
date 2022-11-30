@@ -40,6 +40,7 @@
 - ip route
   
         (check default gateway and networks)
+        alternative command: route
 
 - ip interfaces configuration
 
@@ -62,6 +63,19 @@
         Ping default GW/DNS
         Query DNS(dig,nslookup,getent)
 
+## Transport Layer
+
+- Check if service is running, enable services, start service
+
+        sudo systemctl status [service]
+        sudo systemctl enable [service]
+        sudo systemctl start [service]
+
+- Check port/interface
+  
+        sudo ss -tulpn
+
+
     	
 
 ## Extra's
@@ -80,6 +94,35 @@
     - NOT saving and closing the editor
 
         :qa
+
+## Markdown PDF Extension - VSCode
+
+- export markdown file to pdf
+
+        f1 + Export (pdf)
+        or
+        rightclick + Export (pdf)
+
+## Package management
+
+- Almalinux
+
+        sudo dnf update
+        sudo dnf search [packagename]
+        sudo dnf install -y [package name]
+
+- LinuxMint
+
+        sudo apt update
+        sudo apt upgrade
+
+        sudo apt search [name]
+        sudo apt show [name]
+        sudo apt install -y [name]
+
+## Almalinux taal permanent veranderen
+
+        sudo localetcl set-keymap be
 
 
 
