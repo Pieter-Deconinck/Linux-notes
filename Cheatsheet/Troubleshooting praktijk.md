@@ -37,6 +37,10 @@
         sudo ip link set [interface] down
         sudo ip link set [interface] up
 
+        Alternatief
+        sudo systemctl restart NetworkManager
+        sudo nmcli dev reapply eth1
+
 - ip route
   
         (check default gateway and networks)
