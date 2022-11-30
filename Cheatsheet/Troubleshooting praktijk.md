@@ -56,6 +56,7 @@
 - DHCP example
 ![image](https://user-images.githubusercontent.com/100133263/204814371-7d4eaa67-77ed-49be-a8d6-48bf09b1516b.png)
 
+- Internet Layer checklist
 
         Ping between hosts
         Ping default GW/DNS
