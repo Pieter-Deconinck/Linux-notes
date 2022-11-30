@@ -17,13 +17,13 @@
 
 - IP link 
 
-    ip link
-    ip -s link (see statistics)
-    ip -s link ls [interface] (see specifc network interface)
-    ip link ls up (see all running interfaces)
+        ip link
+        ip -s link (see statistics)
+        ip -s link ls [interface] (see specifc network interface)
+        ip link ls up (see all running interfaces)
     
-    ip link set [interface] up (enable network interface)
-    ip link set [interface] down (disable network interface)
+        ip link set [interface] up (enable network interface)
+        ip link set [interface] down (disable network interface)
 
 ## VI commands
 
