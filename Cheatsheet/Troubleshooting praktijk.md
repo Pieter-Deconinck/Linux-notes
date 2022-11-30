@@ -182,6 +182,7 @@
         :qa
 
 ## Markdown PDF Extension - VSCode
+https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf
 
 - export markdown file to pdf
 
