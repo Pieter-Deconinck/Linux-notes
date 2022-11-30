@@ -70,10 +70,89 @@
         sudo systemctl status [service]
         sudo systemctl enable [service]
         sudo systemctl start [service]
+        sudo systemctl enable --now [service]
 
 - Check port/interface
   
         sudo ss -tulpn
+        sudo ss -tl
+        sudo ss -tln
+
+        /etc/services
+
+- Firewall
+
+        sudo firewall-cmd --list-all
+        sudo firewall-cmd --add-service=[service] --permanent
+        sudo firewall-cmd --reload 
+        sudo firewall-cmd --list-services
+
+        sudo firewall-cmd --add-port=[port]/tcp
+        sudo firewall-cmd --remove-port=[port]/tcp
+
+        sudo firewall-cmd --runtime-to-permanent
+
+        sudo systemctl status firewalld
+
+        sudo firewall-cmd --list-all-zones
+
+## Application layer
+
+- MariaDB
+        
+        sudo dnf install -y mariadb-server
+        Config location: /etc/my.cnf.d/mariadb-server.cnf
+
+- HTTPD (apache)
+
+        sudo dnf install -y httpd
+        Config location: /etc/httpd/conf/httpd.conf
+        error log: tail -f /var/log/httpd/error_log
+
+        check config: apachectl configtest
+
+        html/php location= /var/www/html
+
+- php
+        sudo dnf search php-mysqlnd
+        sudo dnf install -y php-mysqlnd
+
+- curl
+
+        curl http://localhost
+        curl https://localhost
+        curl http://localhost/index.html
+
+
+- Check the logs
+
+        journalctl
+
+        or systemctl status [service]
+        journalctl _PID=[PID]
+
+## SELinux
+
+- Check file context
+
+        ls -Z [file]
+
+- Change file context
+
+        sudo chcon -t httpd_sys_content_t [file]
+
+- Change file context to default value
+
+        sudo restorecon -R /var/www/
+
+- Check booleans
+
+        getsebool -a
+        getsebool -a | grep http
+
+- Enable boolean
+
+        sudo setsebool -P httpd_can_network_connect_db on
 
 
     	
@@ -119,6 +198,16 @@
         sudo apt search [name]
         sudo apt show [name]
         sudo apt install -y [name]
+
+## Change permissions, Change owner:group
+
+- change permissions
+
+        sudo chmod 777 [bestand]
+
+- change owner:group
+
+        sudo chown root:root [bestand]
 
 ## Almalinux taal permanent veranderen
 
