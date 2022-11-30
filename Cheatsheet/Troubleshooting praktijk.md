@@ -221,6 +221,12 @@ https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf
 
         sudo localetcl set-keymap be
 
+## SHARED FOLDER
+
+- make shared folder work
+
+        sudo adduser $USER vboxsf
+        reboot vm
 
 `test`
 
