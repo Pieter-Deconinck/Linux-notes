@@ -29,6 +29,9 @@
 
 ## Virtualbox Adapters
 
+![image](https://user-images.githubusercontent.com/100133263/204811594-49ff32e1-9a22-46b4-b83c-379b494dd7c5.png)
+
+
 ## VI commands
 
     - saving and closing the editor
