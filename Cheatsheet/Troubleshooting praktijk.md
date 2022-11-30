@@ -1,6 +1,7 @@
 30-11-2022
 
-# HTTPD and Mariadb troubleshooting - Pieter Deconinck
+# LAMP Stack troubleshooting- Pieter Deconinck
+(Linux Apache Mariadb Php)
 
 ## Bottom-up approach
 
