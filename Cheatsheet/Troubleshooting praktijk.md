@@ -46,6 +46,7 @@
         /etc/sysconfig/network-scripts/ifcfg-*
 
 - Static IP example
+![image](https://user-images.githubusercontent.com/100133263/204814049-b6358d5f-a297-4e05-851d-81a253f99c3d.png)
 
 - Check DNS service
 
@@ -53,8 +54,7 @@
         Fedora, Debian, etc: resolvectl dns
 
 - DHCP example
-
-    	
+![image](https://user-images.githubusercontent.com/100133263/204814371-7d4eaa67-77ed-49be-a8d6-48bf09b1516b.png)
 
 ## Extra's
 
