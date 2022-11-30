@@ -15,7 +15,7 @@
         Check Virtual Network Adapters
         Check Cable connected
 
-- IP link 
+- ip link 
 
         ip link
         ip -s link (see statistics)
@@ -24,6 +24,23 @@
     
         ip link set [interface] up (enable network interface)
         ip link set [interface] down (disable network interface)
+
+## Internet Layer
+
+- ip a
+  
+        (check ip's and interfaces)
+
+- resetting NetworkManager
+
+        sudo systemctl restart NetworkManager
+        sudo ip link set [interface] down
+        sudo ip link set [interface] up
+
+- ip route
+  
+        (check default gateway and networks)
+    	
 
 ## Extra's
 
