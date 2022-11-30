@@ -25,6 +25,10 @@
         ip link set [interface] up (enable network interface)
         ip link set [interface] down (disable network interface)
 
+## Extra's
+
+## Virtualbox Adapters
+
 ## VI commands
 
     - saving and closing the editor
