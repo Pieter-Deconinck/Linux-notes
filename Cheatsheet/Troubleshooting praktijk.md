@@ -183,6 +183,7 @@
 
     - NOT saving and closing the editor
 
+        :q!
         :qa
 
 ## Markdown PDF Extension - VSCode
