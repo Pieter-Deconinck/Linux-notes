@@ -2,7 +2,8 @@
 
 # HTTPD and Mariadb troubleshooting - Pieter Deconinck
 
-## 
+## Bottom-up approach
+
 
 
 
