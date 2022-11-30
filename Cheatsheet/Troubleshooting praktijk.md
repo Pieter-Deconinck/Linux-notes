@@ -40,6 +40,20 @@
 - ip route
   
         (check default gateway and networks)
+
+- ip interfaces configuration
+
+        /etc/sysconfig/network-scripts/ifcfg-*
+
+- Static IP example
+
+- Check DNS service
+
+        RHEL: /etc/resolv.conf
+        Fedora, Debian, etc: resolvectl dns
+
+- DHCP example
+
     	
 
 ## Extra's
