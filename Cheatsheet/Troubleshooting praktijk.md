@@ -4,6 +4,9 @@
 
 ## Bottom-up approach
 
+![image](https://user-images.githubusercontent.com/100133263/204807679-4295cb9a-c274-4ad5-948b-0966f814453f.png)
+
+
 
 
 
