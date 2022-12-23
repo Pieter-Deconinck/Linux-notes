@@ -5,17 +5,22 @@
 #
 # Author: Pieter Deconinck
 
-# get ip interfaces info and remove the first line to not show loopback interface
+set -o nounset
+set -o errexit
 
-#variables
-
-ipaddresses=$(ip -brief a | awk 'NR!=1')
-
+tput setaf 1
 echo "???? IP addresses ????"
-ip -brief a | awk 'NR!=1'
+tput sgr0
+ip -brief a
 
+
+tput setaf 1
 echo -e "\n???? Default gateway ????"
-ip r | awk '{ if($1 == "default") print $3,$4,$5;}'
+tput sgr0
+ip route | grep default | awk '{print $3,$4,$5}'
 
+tput setaf 1
+echo -e "\n???? DNS servers(s) ????"
+tput sgr0
+resolvectl dns
 
-echo -e "\n???? DNS server(s) ????"
