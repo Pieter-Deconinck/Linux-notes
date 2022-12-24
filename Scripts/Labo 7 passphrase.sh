@@ -68,7 +68,7 @@ process_cli_args() {
   # Loop over all arguments
   for item in "${@}"; do
      # Use a case statement to determine what to do
-     case "$item" in
+     case "${item}" in
         # If -h or --help was given, call usage function and exit
         -h|--help)
           usage
