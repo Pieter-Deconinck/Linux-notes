@@ -52,7 +52,7 @@ itself with mdadm. the specific command used for this would be ``sudo mdadm --cr
 
 You can check the progress and stats for the raid with ``cat /proc/mdstat`` mine took 2-3 hours to finish.
 
-You can check the partitions and disks with ``sudo lbslk``  
+You can check the partitions and disks with ``sudo lsblk``  
 ``sudo fdisk -l`` can also provide additional information
 
 

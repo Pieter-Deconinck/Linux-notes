@@ -40,7 +40,28 @@ Changed the name for the vm:
             vb.name = "zatreVM"
         end
 
+# Vagrantfile NAS
 
+        config.vm.define "NASVM"
+        config.vm.hostname = "NASVM"
+        config.vm.provider :virtualbox do |vb|
+            vb.name = "NASVM"
+        end
+
+        config.vm.network "public_network"
+
+        config.vm.provision :shell, path: "/mount/raid/vagrant/NAS/NASVMprovisioning/NASVMprovision.sh"
+
+# NAS provision script
+
+
+# checkmk installation on homelab
+
+`sudo apt update`  
+`wget https://download.checkmk.com/checkmk/2.1.0p21/check-mk-raw-2.1.0p21_0.jammy_amd64.deb`  
+`sudo apt install -y ./check-mk-raw-2.1.0p21_0.jammy_amd64.deb`  
+
+https://www.digitalocean.com/community/tutorials/how-to-monitor-server-health-with-checkmk-2-0-on-ubuntu-20-04
 # Extra
 check vagrant version: `vagrant --version`
 
